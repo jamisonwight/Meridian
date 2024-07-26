@@ -1,0 +1,166 @@
+
+// Heading Styles
+.heading-large {
+	@include mq(small) {}
+
+	@include mq(large) {}
+}
+
+.heading-1 {
+	@include gotham_regular;
+	font-size: 40px;
+	text-transform: uppercase;
+
+	&.with-divider {
+		&:after {
+			content: '';
+			position: relative;
+			left: 50%;
+			display: block;
+			width: 60px;
+			height: 3px;
+			background: $brown;
+			transform: translateX(-50%);
+			margin-top: 10px;
+		}
+	}
+}
+
+.heading-2 {
+	@include gotham_regular;
+	font-size: 34px;
+	letter-spacing: 2px;
+}
+
+.heading-3 {
+	@include gotham_regular;
+	font-size: 24px;
+	font-weight: 500;
+	padding-bottom: 0;
+}
+
+.heading-4 {
+	@include gotham_light;
+	font-size: 16px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.heading-6 {
+	@include gotham_regular;
+	font-size: 18px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+small, .small {
+	@include proxima_nova_regular;
+	font-size: 14px !important;
+	letter-spacing: 1.74px;
+}
+
+sub, sup {
+   
+}
+
+p, .paragraph {
+	@include open_sans_bold;
+	font-size: 18px;
+
+	&.paragraph-alt {
+		@include proxima_nova_regular;
+	}
+}
+
+ol li,
+td {
+	@include proxima_nova_regular;
+}
+
+
+
+a {
+
+	&.link-small {
+		font-size: 14px !important;
+		font-family: canada-type-gibson, sans-serif;
+		font-weight: 600;
+		font-style: normal;
+	}
+}
+
+blockquote {
+	
+
+	.quote-symbol {
+		position: relative;
+		display: inline-block;
+		font-family: henderson-slab-basic, serif;
+		font-weight: 600;
+		font-style: normal;
+		font-size: 100px;
+		line-height: 0;
+
+		&:first-of-type {
+			position: absolute;
+			left: -30px;
+			top: 90px;
+
+			@include mq(medium, 'max') {
+				left: -60px !important;
+			}
+
+			&.is-mac {
+				top: 80px !important;
+			}
+		}
+
+		&:last-of-type {
+			transform: rotate(180deg);
+			top: -2px;
+
+			&.is-mac {
+				top: 0 !important;
+			}
+		}
+	}
+
+}
+
+.top-bar, .top-bar ul {
+	background-color: transparent !important;
+
+	li {
+		list-style-type: none;
+
+		a {
+			@include gotham_regular;
+			font-size: 16px;
+			letter-spacing: 0.96px;
+		}
+	}
+}
+
+
+// Utility Styles
+.text-center {
+	text-align: center;
+}
+
+.text-center-min-large {
+	@media screen and (min-width: 1024px) {
+		text-align: center !important;
+	}
+}
+
+.text-center-max-medium {
+	@media screen and (max-width: 1023px) {
+		text-align: center !important;
+	}
+}
+
+.text-center-max-small {
+	@media screen and (max-width: 639px) {
+		text-align: center !important;
+	}
+}

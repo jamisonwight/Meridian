@@ -1,0 +1,241 @@
+.contact {
+    padding: 80px 0;
+}
+
+.wpcf7 .small, [data-class="wpcf7cf_group"] {width: calc(33.33% - 10px);}
+.wpcf7 .medium {width: calc(50% - 10px)}
+.wpcf7 .large {width: 100%}
+
+@media screen and (min-width: 0) and (max-width: 639px) {
+    .wpcf7 .small,
+    .wpcf7 .medium,
+    .wpcf7 .large,
+    [data-class="wpcf7cf_group"] {
+        width: 100%;
+        position: relative;
+    }
+}
+
+legend {
+    width: 100%;
+}
+
+.recaptcha {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 30px;
+}
+
+.wpcf7,
+.custom-form {
+    padding: 0 35px;
+
+    .heading-1,
+    .paragraph {
+        text-align: center;
+    }
+
+    .paragraph {
+
+    }
+
+    fieldset {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    
+    .wpcf7-form.invalid {
+        fieldset {
+            align-items: flex-start !important;
+        }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+        height: 62px;
+        border: 1px solid $black !important;
+
+        &::placholder,
+        &::-webkit-input-placeholder,
+        &::-moz-placeholder,
+        &:-ms-input-placeholder,
+        &:-moz-placeholder,
+        &:placeholder-shown {
+            @include proxima_nova_regular;
+            font-size: 18px;
+            color: $black !important;
+            opacity: 1 !important;
+            box-shadow: none;
+        }
+    }
+
+    .wpcf7-radio {
+        span {
+            @include gotham_regular;
+            font-size: 14px;
+            color: $black;
+        }
+    }
+
+    .state {
+        width: calc(100%);
+    }
+
+    .contact-method {
+        text-align: center;
+        padding: 20px 0;
+
+        input {
+            height: auto !important;
+        }
+
+        label {
+            margin: 5px 20px;
+        }
+    }
+
+    input,
+    textarea {
+        text-indent: 10px;
+        color: $white;
+        background: $white;
+        border: 1px solid $black !important;
+
+        &:placeholder-shown,
+        &::placeholder {
+            @include proxima_nova_regular;
+            font-size: 18px;
+            color: $black !important;
+            opacity: 1 !important;
+            box-shadow: none;
+        }
+    }
+
+    select {
+        padding: 0 0 0 20px;
+        margin-top: 5px;
+
+        option {
+            color: $black;
+        }
+    }
+
+
+    textarea {
+        @include proxima_nova_regular;
+        font-size: 18px;
+        color: $black !important;
+        opacity: 1 !important;
+        box-shadow: none;
+        border: 1px solid $black !important;
+    }
+
+    label {
+        @include gotham_regular;
+        font-size: 14px;
+        color: $black;
+
+
+
+        span {
+            color: $red;
+        }
+
+        .wpcf7-form-control-wrap {
+            margin-top: 5px;
+            display: block;
+
+            .wpcf7-not-valid-tip {
+                padding-left: 10px;
+                text-indent: 0;
+                position: relative;
+                top: -20px;
+                display: inline-block;
+            }
+        }
+    }
+
+    form p {
+        margin: 0 !important;
+    }
+
+    .wpcf7-not-valid-tip {
+        color: $red !important;
+        padding-left: 10px;
+        text-indent: 0;
+        position: absolute;
+        bottom: -25px;
+        left: 0;
+        display: inline-block;
+        @include gotham_black;
+        font-size: 18px;
+        font-weight: normal !important;
+        text-transform: uppercase !important;
+    }
+
+    .gender .wpcf7-not-valid-tip {
+        bottom: -55px !important;
+    }
+
+    .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output {
+        border-color: $red !important;
+    }
+
+    .wpcf7 form .wpcf7-response-output {
+        border: 2px solid $red !important;
+    }
+
+    .wpcf7-response-output {
+        text-align: center;
+        margin: 2em 0.5em 4em !important;
+        width: 100%;
+    }
+
+    .align-center {
+        text-align: center;
+    }
+
+    .btn-default {
+        padding: 0 40px;
+    }
+
+    .wpcf7-submit {
+        text-align: center;
+        cursor: pointer;
+
+        button {
+            padding: 0 40px;
+        }
+
+        &:not(.is-mac) {
+            span {}
+
+
+            svg {
+                margin-top: -2px;
+            }
+
+        }
+
+        span {
+            top: 1px;
+            left: 3px;
+
+            svg {
+                transform: translateY(calc(-50% - 1px));
+            }
+        }
+
+    }
+
+}
+
+div.wpcf7 .ajax-loader {
+    position: relative;
+    display: block;
+}

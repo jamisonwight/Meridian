@@ -1,0 +1,117 @@
+/************************************************
+
+Stylesheet: Global Stylesheet
+
+*************************************************/
+// VARIABLES
+$content-width: calc(100% - 75px);
+$inner-content-max: 1440px;
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+.page-title {
+	// Remove Foundation vcard styling from author page titles
+	.vcard {
+		border: 0px;
+		padding: 0px;
+	}
+}
+
+*, html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+}
+
+.page-y-offset {
+	margin-top: 82px;
+
+	@include mq(large, 'max') {
+		margin-top: 82px;
+	}
+}
+
+.fancybox-container {
+	z-index: 99999999990 !important;
+}
+
+a {
+	text-decoration: none;
+}
+
+#__lpform_your-name {
+	display: none !important;
+}
+
+.grid-container {
+	max-width: 100% !important;
+	padding-right: 0 !important;
+	padding-left: 0 !important;
+}
+
+.inner-content {
+	max-width: $inner-content-max;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+
+.menu .active>a {
+	background: transparent;
+	color: $black;
+}
+
+.mobile {
+	@include mq(large) {
+		display: none !important;
+	}
+}
+.desktop {
+	display: none !important;
+	
+	@include mq(large) {
+		display: block !important;
+	}
+
+}
+
+.error404 {
+	.content {
+		padding: 300px 0;
+
+		article {
+			text-align: center;
+
+			h1 {
+				padding-bottom: 40px;
+			}
+
+			a {
+				position: relative;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+	}
+}
+
+hr {
+	width: 70%;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	border: 1px solid $red;
+	outline: none;
+
+	@include mq(medium) {
+		width: 317px;
+	}
+}

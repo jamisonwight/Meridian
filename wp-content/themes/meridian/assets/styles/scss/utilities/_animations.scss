@@ -1,0 +1,76 @@
+.animInUp {
+    transform: translateY(50px);
+    transition: 1s ease;
+    opacity: 0.7;
+
+    &.animInUpActive {
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+    }
+
+    @include mq(large, 'max') {
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+    }
+}
+
+.animInLeft {
+    transform: translateX(-50px);
+    transition: 1s ease;
+    opacity: 0.7;
+
+    &.animInLeftActive {
+        transform: translateX(0) !important;
+        opacity: 1 !important;
+    }
+
+    @include mq(large, 'max') {
+        transform: translateX(0) !important;
+        opacity: 1 !important;
+    }
+}
+
+.animInRight {
+    transform: translateX(50px);
+    transition: 1s ease;
+    opacity: 0.7;
+
+    &.animInRightActive {
+        transform: translateX(0) !important;
+        opacity: 1 !important;
+    }
+
+    @include mq(large, 'max') {
+        transform: translateX(0) !important;
+        opacity: 1 !important;
+    }
+}
+
+.animInDown {
+    transform: translateY(-50px);
+    transition: 1s ease;
+    opacity: 0.7;
+
+    &.animInDownActive {
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+    }
+
+    @include mq(large, 'max') {
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+    }
+}
+
+.animInFade {
+    transition: 1s ease;
+    opacity: 0.5;
+
+    &.animInFadeActive {
+        opacity: 1 !important;
+    }
+
+    @include mq(large, 'max') {
+        opacity: 1 !important;
+    }
+}

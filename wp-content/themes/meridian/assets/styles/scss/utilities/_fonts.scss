@@ -1,0 +1,44 @@
+@mixin proxima_nova_regular {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin proxima_nova_bold {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+@mixin open_sans_regular {
+    font-family: open-sans, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin open_sans_bold {
+    font-family: open-sans, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+@mixin gotham_regular {
+    font-family: 'Gotham', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.96px;
+}
+
+@mixin gotham_black {
+    font-family: 'Gotham Black', sans-serif;
+}
+
+@mixin gotham_light {
+    font-family: 'Gotham Light', sans-serif;
+}
+
+@mixin gotham_thin {
+    font-family: 'Gotham Thin', sans-serif;
+}
+
+@mixin gotham_book {
+    font-family: 'Gotham Book', sans-serif;
+}

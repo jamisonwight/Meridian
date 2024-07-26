@@ -1,0 +1,479 @@
+.home {
+
+    .hero {
+        position: relative;
+        width: 100%;
+        height: 590px;
+
+
+        .background {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            z-index: 3;
+            
+            @include mq(large, 'max') {
+                padding: 0 35px;
+            }
+            
+
+            .content-container {
+                max-width: 732px;
+                color: $white;
+                display: flex;
+                align-items: center;
+                
+                @include mq(large) {
+                    margin-right: 60px;
+                }
+
+                @include mq(medium, 'max') {
+                    flex-direction: column;
+                    justify-content: center;
+                  
+                }
+
+                img {
+                    margin-right: 40px;
+
+                    @include mq(medium, 'max') {
+                        margin-right: 0 !important;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                h1 {
+                    line-height: 1.2em;
+                    margin: 0 !important;
+
+                    &.is-mac {
+                        padding-top: 30px;
+                    }
+
+                    @include mq(medium, 'max') {
+                        font-size: 32px !important;
+                        text-align: center !important;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .about {
+        width: 100%;
+        position: relative;
+        padding: 100px 0;
+        background: $brown;
+        margin-bottom: calc(192px / 3);
+
+        @include mq(large) {
+            min-height: 500px;
+        }
+
+        .meridian-circle {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            bottom: calc(-192px / 2);
+            left: 50%;
+            transform: translateX(-50%);
+            width: 192px;
+            height: 192px;
+        }
+
+        .wave {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content-container {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 35px;
+            max-width: 787px;
+            z-index: 3;
+
+            .description {
+                position: relative;
+                color: $white;
+                text-align: center;
+                padding: 60px 0;
+
+                p {
+                    font-family: open-sans, sans-serif !important;
+                    font-weight: 700 !important;
+                    font-style: normal
+                }
+
+                @include mq(medium, 'max') {
+                    p {
+                        font-size: 20px !important
+                    }
+                }
+            }
+        }
+    }
+
+    .our-wines {
+        position: relative;
+        padding: 100px 0;
+        text-align: center;
+
+        .title {
+            display: inline-block;
+            padding: 40px 0;
+        }
+
+        .wines {
+            .wine {
+                margin: 40px 0;
+
+                a {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+
+                    &:hover {
+                        .featured-image {
+                            transform: translateY(-30px);
+                        }
+                    }
+
+                    .featured-image {
+                        position: relative;
+                        height: 377px;
+                        transform: translateY(0);
+                        transition: .45s ease;
+
+                        img {
+                            height: 100%;
+                        }
+                    }
+
+                    .content {
+                        padding: 20px 0;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        .heading-3 {
+                            color: $black !important;
+                            text-transform: uppercase;
+                        }
+
+                        .heading-4 {
+                            display: block;
+                            text-transform: uppercase;
+                            color: $black;
+
+                            &.is-mac {
+                                margin-top: -10px;
+                            }
+                        }
+                    }
+
+                    .btn-container {
+                        .btn-default {
+                            padding: 0 30px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .wine-detail-modals {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        z-index: 30;
+
+        &.add-overlay {
+            background: rgba(0, 0, 0, 0.8);
+            visibility: visible !important;
+            z-index: 30 !important;
+
+            @include mq(large, 'max') {
+                z-index: 1001 !important;
+            }
+        }
+
+
+        .wine-modal {
+            position: fixed;
+            top: calc(50% + 20px);
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            width: 100%;
+            height: 80vh;
+            max-width: 1440px;
+            display: none;
+            background: $white;
+            display: flex;
+            visibility: hidden;
+
+            @include mq(large, 'max') {
+                height: 100% !important;
+                top: 0 !important;
+                left: 0 !important;
+                transform: none !important;
+                flex-wrap: wrap;
+                overflow-y: scroll;
+            }
+
+            &.modal-open {
+                visibility: visible !important;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 30%;
+                width: 70%;
+                height: 100%;
+                background: $white;
+                mix-blend-mode: multiply;
+
+                @include mq(large, 'max') {
+                    width: 100% !important;
+                    left: 0 !important;
+                }
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 30%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                mix-blend-mode: multiply;
+
+                @include mq(large, 'max') {
+                    width: 100% !important;
+                    left: 0 !important;
+                    height: 450px !important;
+                }
+            }
+
+            &.theme-yellow {
+                .modal-close {
+                    background: $yellow !important;
+                }
+
+                .featured-image {
+                    background: transparent linear-gradient(190deg, #FCEFCF4D 0%, #FDCD34CC 100%) 0% 0% no-repeat padding-box;
+                }
+            }
+
+            &.theme-maroon {
+                .modal-close {
+                    background: $maroon !important;
+                }
+
+                .featured-image {
+                    background: transparent linear-gradient(192deg, #521130D3 0%, #72153F93 33%, #8E184D33 100%) 0% 0% no-repeat padding-box;
+                }
+            }
+
+            &.theme-purple {
+                .modal-close {
+                    background: $purple !important;
+                }
+
+                .featured-image {
+                    background: transparent linear-gradient(183deg, #FFFFFFD5 0%, #96799B 100%) 0% 0% no-repeat padding-box;
+                }
+            }
+
+            &.theme-green {
+                .modal-close {
+                    background: $green !important;
+                }
+
+                .featured-image {
+                    background: transparent linear-gradient(190deg, #FFFFFF00 0%, #86C67551 43%, #5FB448 100%) 0% 0% no-repeat padding-box;
+                }
+            }
+
+            .featured-image {
+                position: relative;
+                width: 30%;
+                height: 100%;
+                padding: 20px 0;
+                z-index: 5;
+                text-align: right;
+
+
+                .image {
+                    height: 100%;
+                    margin-right: 40px;
+                    max-height: 660px;
+                    position: relative;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                .wave {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: auto;
+                    z-index: -1;
+                }
+
+                @include mq(large, 'max') {
+                    width: 100% !important;
+                    height: 450px !important;
+                    text-align: center !important;
+
+                    img {
+                        margin-right: 0 !important;
+                    }
+                }
+
+            }
+
+            .content-container {
+                position: relative;
+                width: 70%;
+                padding: 60px 80px;
+                overflow-y: scroll;
+                z-index: 20;
+
+                br {
+                    display: none !important;
+                }
+
+                @include mq(large, 'max') {
+                    width: 100% !important;
+                    padding: 60px 40px !important;
+                    background: $white;
+                }
+
+                .modal-close {
+                    position: fixed;
+                    top: 60px;
+                    right: 80px;
+                    width: 75px;
+                    height: 75px;
+                    background: $grey-dark;
+                    cursor: pointer;
+
+                    @include mq(large, 'max') {
+                        top: 0 !important;
+                        right: 0 !important;
+                    }
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%) rotate(-45deg);
+                        width: 3px;
+                        height: 50px;
+                        background: $white;
+                        z-index: 2;
+                    }
+        
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%) rotate(-45deg);
+                        width: 50px;
+                        height: 3px;
+                        background: $white;
+                        z-index: 2;
+                    }
+                }
+
+                .title {
+                    margin-bottom: 40px;
+
+                    .heading-2 {
+                        text-transform: uppercase;
+                    }
+
+                    .heading-4 {
+                        display: block;
+
+                        &.is-mac {
+                            margin-top: -5px;
+                        }
+                    }
+
+                }
+
+                .description {
+                    padding-right: 80px;
+                    margin-bottom: 20px;
+
+                    @include mq(large, 'max') {
+                        padding-right: 0 !important;
+                    }
+
+                    .heading-4 {
+                    }
+
+                    p {
+                        @include proxima_nova_regular;
+                    }
+                }
+
+                .btn-default {
+                    padding: 0 40px;
+                    margin-top: 20px;
+                    cursor: pointer;
+                    
+                    i {
+                        display: inline-block !important;
+                    }
+
+                }
+            }
+        }
+    }
+
+    .where-to-buy {
+        text-align: center;
+
+        .heading-1 {
+            padding: 20px 0 40px;
+        }
+    }
+}

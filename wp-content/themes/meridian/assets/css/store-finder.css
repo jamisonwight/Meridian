@@ -1,0 +1,235 @@
+#finder_body {
+	margin:0;
+	padding:0 0 50px;
+	width:100%;
+	background-color:transparent;
+}
+
+#finder_body a {
+	color: #56565a;
+}
+
+#finder_body a:hover {
+	color: #0A0405;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 639px) {
+	#finder {
+		max-width: 100% !important;
+	}
+}
+
+#finder_form {
+	border-top:1px solid #56565a;
+	margin-top:20px;
+}
+
+#finder_content {
+	margin:0;
+	padding:0;
+}
+
+#tab-list {
+	max-width:100%;
+	height:100%;
+}
+
+#tab-form .panel-body,#tab-list .panel-body {
+	padding:0;
+}
+
+.form-horizontal .form-group {
+	margin:0;
+}
+
+#finder_tab_nav a {
+	box-shadow:none;
+	font-family: 'Gotham', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.96px;
+    font-size: 14px;
+    color: #0A0405;
+	padding:10px 20px;
+}
+
+#finder_tab_nav li {
+	border: none;
+}
+
+#finder_tab_nav li.active {
+	border: none;
+	color: #0A0405;
+}
+
+#finder_tab_nav li.active:hover {
+	background:none!important;
+	border: none;
+}
+
+#finder_tab_nav li.active:hover a {
+	color: #0A0405!important;
+}
+#finder {
+	max-width: 40%;
+}
+.panel {
+	background:none;
+	border-radius:0!important;
+	-webkit-box-shadow:none;
+	box-shadow:none;
+	font-size:16px;
+	padding:20px 0 0;
+}
+
+.panel-footer {
+	background:none;
+}
+
+.form-horizontal .control-label {
+	font-family: 'Gotham', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.96px;
+    font-size: 14px;
+    font-style: italic !important;
+    color: #0A0405;
+}
+#finder_BFBRCD {
+	display: none !important;
+}
+#form-group-BFBRCD > label {
+	margin-bottom: -30px;
+}
+select.form-control {
+	background: #fff;
+	background-image:none!important;
+	border: 1px solid #0A0405 !important;
+	border-radius:0!important;
+	box-shadow:none!important;
+	color:#0A0405!important;
+	font-family: 'Gotham', sans-serif;
+	font-size:16px!important;
+	height:42px!important;
+	margin:0!important;
+	text-indent:8px!important;
+	-webkit-appearance:none;
+}
+
+.finder_form_right select {
+	margin-bottom:15px!important;
+}
+
+select:focus,select.form-control:focus {
+	background-image:none!important;
+	border-color:#56565a!important;
+	box-shadow:none!important;
+}
+
+input[type=text] {
+	background: #fff;
+	border: 1px solid #0A0405 !important;
+	border-radius:0!important;
+	box-shadow: none !important;
+	color:#0A0405!important;
+	font-family: 'Gotham', sans-serif;
+	font-size:16px!important;
+	height:42px!important;
+	margin:0 0 15px!important;
+	text-indent:8px!important;
+}
+
+input[type=text]:focus {
+	box-shadow:none!important;
+}
+
+input[type=text]::placeholder {
+	color:#0A0405!important;
+}
+
+.btn {
+	border-right: 2px solid #DCDDDE;
+    border-bottom: 2px solid #DCDDDE;
+	position: relative;
+    bottom: 5px;
+    right: 5px;
+    display: inline-block;
+    min-width: 200px;
+    height: 60px;
+    background: #0A0405;
+    color: #ffffff;
+    box-shadow: none !important;
+    border-radius: 0;
+    font-size: 14px;
+    margin: 15px 0 0 5px;
+    letter-spacing: 1.24px;
+    text-transform: uppercase;
+    transition: .25s ease-in-out;
+}
+.btn:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    border-right: 2px solid #DCDDDE;
+    border-bottom: 2px solid #DCDDDE;
+    transition: .25s ease-in-out;
+}
+.btn:hover:before {
+    transform: translate(-5px, -5px);
+}
+.btn:hover,.btn:active {
+	color: #fff !important;
+    background: #0A0405 !important;
+    bottom: 0;
+    right: 0;
+    position: relative;
+    display: inline-block;
+    min-width: 200px;
+    height: 60px;
+    background: #0A0405;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 1.24px;
+    text-transform: uppercase;
+    transition: .25s ease-in-out;
+}
+#finder_map_paging {
+    top: 140px;
+}
+.finder_vip_logo {
+	display:none;
+}
+.panel-primary>.panel-heading {
+	background: none !important;
+}
+.panel-title {
+	color:#56565a!important;
+}
+.panel-title>a,.panel-title>small,
+.panel-title>.small,
+.panel-title>small>a,
+.panel-title>.small>a {
+	color:#56565a!important;
+	font-size:16px!important;
+	opacity:1;
+}
+
+.label-default {
+	background-color:#0A0405;
+}
+.finder_miles {
+	background: #0A0405;
+	padding: .2em .6em !important;
+}
+.alert-warning {
+	background-color:transparent!important;
+	border-radius:0;
+	border:1px solid #d878ac!important;
+	color: #0A0405!important;
+	margin:30px 0!important;
+}
+#tab-form, #vipcopyright {
+	width: 100%;
+}
